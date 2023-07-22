@@ -14,6 +14,14 @@ import session from "express-session";
 import passport from "passport";
 import passportLocal from "passport-local";
 
+// modules for jwt support
+import cors from "cors";
+import passportJWT from "passport-jwt";
+
+// define JWT aliases
+let JWTStrategy = passportJWT.Strategy;
+let ExtractJWT = passportJWT.ExtractJwt;
+
 // authentication objects
 let strategy = passportLocal.Strategy; // alias
 import User from "../Models/user";

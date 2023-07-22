@@ -8,6 +8,8 @@ import passport from "passport";
 
 import User from "../Models/user";
 
+import { GenerateToken } from '../Util/index';
+
 /**
  * Function to handle registration
  */
