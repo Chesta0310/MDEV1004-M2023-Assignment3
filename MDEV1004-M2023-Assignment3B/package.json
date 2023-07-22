@@ -3,6 +3,10 @@
     "version": "0.0.3",
     "description": "This is a project for MDEV1004 - Assignment 3 - in the Summer 2023 semester at Georgian",
     "author": "Chesta Patel",
+    "engines": {
+        "node": "20.2.0",
+        "npm": "9.6.6"
+    },
     "scripts": {
         "start": "node server.js"
     },
