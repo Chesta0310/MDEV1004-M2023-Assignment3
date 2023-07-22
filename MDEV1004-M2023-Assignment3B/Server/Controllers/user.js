@@ -6,6 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.ProcessLogout = exports.ProcessLogin = exports.ProcessRegisterPage = void 0;
 const passport_1 = __importDefault(require("passport"));
 const user_1 = __importDefault(require("../Models/user"));
+const index_1 = require("../Util/index");
 function ProcessRegisterPage(req, res, next) {
     let newUser = new user_1.default({
         username: req.body.username,
@@ -46,15 +47,22 @@ function ProcessLogin(req, res, next) {
                 user: user,
             });
         }
-        req.login(user, (err) => {
+        req.logIn(user, (err) => {
             if (err) {
                 console.error(err);
                 return next(err);
             }
+            const authToken = (0, index_1.GenerateToken)(user);
             return res.json({
                 success: true,
-                msg: "User Logged in Successfully!",
-                user: user,
+                msg: "User Logged In Successfully!",
+                user: {
+                    id: user._id,
+                    displayName: user.displayName,
+                    username: user.username,
+                    emailAddress: user.emailAddress,
+                },
+                token: authToken,
             });
         });
     })(req, res, next);

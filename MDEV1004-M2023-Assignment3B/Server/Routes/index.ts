@@ -5,6 +5,7 @@
 import express from "express";
 import { AddMovie, DeleteMovie, DisplayMovieByID, DisplayMovieList, UpdateMovie } from "../Controllers/movie";
 import { ProcessLogin, ProcessLogout, ProcessRegisterPage } from "../Controllers/user";
+import passport from "passport";
 let router = express.Router();
 
 /* GET home page. */
@@ -20,15 +21,15 @@ router.get("/find/:id", function (req, res, next) {
     DisplayMovieByID(req, res, next);
 });
 
-router.post("/add", function (req, res, next) {
+router.post("/add", passport.authenticate("jwt", { session: false }), function (req, res, next) {
     AddMovie(req, res, next);
 });
 
-router.post("/update/:id", function (req, res, next) {
+router.post("/update/:id", passport.authenticate("jwt", { session: false }), function (req, res, next) {
     UpdateMovie(req, res, next);
 });
 
-router.delete("/delete/:id", function (req, res, next) {
+router.delete("/delete/:id", passport.authenticate("jwt", { session: false }), function (req, res, next) {
     DeleteMovie(req, res, next);
 });
 

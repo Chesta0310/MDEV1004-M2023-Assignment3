@@ -1,3 +1,7 @@
+// File Name: index.ts
+// Student Name: Chesta Patel
+// Student ID: 200542446
+// Date: 22nd July 2023
 import jwt from "jsonwebtoken";
 import db from "../Config/db";
 

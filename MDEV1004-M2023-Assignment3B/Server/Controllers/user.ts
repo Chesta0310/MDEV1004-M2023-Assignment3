@@ -8,7 +8,7 @@ import passport from "passport";
 
 import User from "../Models/user";
 
-import { GenerateToken } from '../Util/index';
+import { GenerateToken } from "../Util/index";
 
 /**
  * Function to handle registration
@@ -63,17 +63,25 @@ export function ProcessLogin(req: Request, res: Response, next: NextFunction): v
                 user: user,
             });
         }
-        req.login(user, (err) => {
+        req.logIn(user, (err) => {
             // are there DB errors?
             if (err) {
                 console.error(err);
                 return next(err);
             }
+            const authToken = GenerateToken(user);
+
             // return response
             return res.json({
                 success: true,
-                msg: "User Logged in Successfully!",
-                user: user,
+                msg: "User Logged In Successfully!",
+                user: {
+                    id: user._id,
+                    displayName: user.displayName,
+                    username: user.username,
+                    emailAddress: user.emailAddress,
+                },
+                token: authToken,
             });
         });
     })(req, res, next);
