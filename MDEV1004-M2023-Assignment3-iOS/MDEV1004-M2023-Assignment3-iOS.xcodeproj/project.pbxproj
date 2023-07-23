@@ -14,6 +14,7 @@
 		90704E202A6B99790035F402 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90704E1F2A6B99790035F402 /* Assets.xcassets */; };
 		90704E232A6B997A0035F402 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90704E212A6B997A0035F402 /* LaunchScreen.storyboard */; };
 		90704E2B2A6B9C630035F402 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90704E2A2A6B9C630035F402 /* MovieTableViewCell.swift */; };
+		90704E2D2A6B9E670035F402 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90704E2C2A6B9E670035F402 /* Movie.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		90704E222A6B997A0035F402 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		90704E242A6B997A0035F402 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		90704E2A2A6B9C630035F402 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
+		90704E2C2A6B9E670035F402 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				90704E212A6B997A0035F402 /* LaunchScreen.storyboard */,
 				90704E242A6B997A0035F402 /* Info.plist */,
 				90704E2A2A6B9C630035F402 /* MovieTableViewCell.swift */,
+				90704E2C2A6B9E670035F402 /* Movie.swift */,
 			);
 			path = "MDEV1004-M2023-Assignment3-iOS";
 			sourceTree = "<group>";
@@ -145,6 +148,7 @@
 				90704E172A6B99780035F402 /* AppDelegate.swift in Sources */,
 				90704E2B2A6B9C630035F402 /* MovieTableViewCell.swift in Sources */,
 				90704E192A6B99780035F402 /* SceneDelegate.swift in Sources */,
+				90704E2D2A6B9E670035F402 /* Movie.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
